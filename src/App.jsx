@@ -3,7 +3,7 @@ import { useWeb3 } from "@3rdweb/hooks";
 import { ThirdwebSDK } from "@3rdweb/sdk";
 import { ethers } from "ethers";
 import { UnsupportedChainIdError } from "@web3-react/core";
-
+import * as appStyles from "./app.module.scss";
 
 //instantiate the sdk on Rinkeby.
 const sdk = new ThirdwebSDK("rinkeby");
@@ -44,6 +44,10 @@ const App = () => {
   const [proposals, setProposals] = useState([]);
   const [isVoting, setIsVoting] = useState(false);
   const [hasVoted, setHasVoted] = useState(false);
+
+  
+
+
 
   // Retrieve all our existing proposals from the contract.
   useEffect(() => {
@@ -391,7 +395,7 @@ const memberList = useMemo(() => {
 
   // Render mint nft screen.
   return (
-    <div className="mint-nft">
+    <div className={appStyles.mintNft}>
       <h1>Mint your free 🗝DAO Membership NFT</h1>
       <button
         disabled={isClaiming}
