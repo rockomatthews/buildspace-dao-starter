@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "16.13.2"
+    "node": "14x"
   },
   "dependencies": {
     "@3rdweb/hooks": "^1.6.0",
